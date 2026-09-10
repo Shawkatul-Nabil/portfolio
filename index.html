@@ -1,62 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mojaa</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/nav.css">
-    <link rel="shortcut icon" href="images/pfp.jpg" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shawkatul Islam Nabil — Portfolio</title>
+<meta name="description" content="Shawkatul Islam Nabil — Computer Science & Engineering student at BUBT building mobile, desktop, and computer-vision applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <h1>My first Website</h1>
-   <header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="form.html">Form</a></li>
-            <li><a href="Portfolio.html">Portfolio</a></li>
-            <li><a href="blog.html">Blog</a></li>
-           </ul>
-    </nav>
+
+<header class="site-header">
+  <a class="mark" href="#top">SI</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#projects">Projects</a>
+    <a href="#about">About</a>
+  </nav>
 </header>
-   <main>
-    <div class="container">
-        <div class="hero">
-            <h1>Welcome to Mojaa</h1>
-            <p>Your one-stop destination for awesome content and creativity!</p>
-        </div>
-        <div class="features">
-            <div class="feature">
-                <h2>Fast & Responsive</h2>
-                <p>Our site is optimized for all devices, ensuring a seamless experience.</p>
-            </div>
-            <div class="feature">
-                <h2>Creative Designs</h2>
-                <p>We bring modern and stylish web designs to life.</p>
-            </div>
-            <div class="feature">
-                <h2>Easy Navigation</h2>
-                <p>Find what you need with our simple and clean menu.</p>
-            </div>
-        </div>
-        <div class="table-container">
-            <h2>Build by:</h2>
-            <table>
-                <tr>
-                    <th>Name</th>
-                    <th>Role</th>
-                    <th>Location</th>
-                </tr>
-                <tr>
-                    <td>Shawkatul Islam</td>
-                    <td>Developer</td>
-                    <td>Bangladesh</td>
-                </tr>
-                
-            </table>
-        </div>
+
+<main id="top">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hello<br>I'm <span>Shawkatul</span></h1>
+      <p class="hero-sub">Third-year Computer Science &amp; Engineering student at BUBT who independently designs and ships full applications across mobile, desktop, and embedded / computer-vision domains. Also founder of a small hardware-reselling business with its own internal management software.</p>
+      <ul class="social-row">
+        <li><a href="https://github.com/Shawkatul-Nabil" target="_blank" rel="noopener">GITHUB</a></li>
+        <li><a href="mailto:shawkatul25@gmail.com">EMAIL</a></li>
+      </ul>
+      <a class="btn" href="Shawkatul_Islam_Nabil_CV.pdf" download>Download CV</a>
     </div>
-   </main>
+    <div class="hero-photo">
+      <img class="hero-photo-img" src="images/portrait.jpg" alt="Shawkatul Islam Nabil">
+    </div>
+  </section>
+
+  <!-- ===== WORK ===== -->
+  <section id="work" class="work">
+    <h2>Work</h2>
+    <p class="section-note">Applications built solo, end to end — from schema and backend to the interface people actually use.</p>
+
+    <ul class="worklist">
+      <li class="workrow">
+        <div class="workrow-head">
+          <h3>MFC Pulse</h3>
+          <span class="workrow-date">Solo project</span>
+        </div>
+        <p>A POS and admin dashboard app for a food-and-beverage business — first prototyped in Python/Flet, then rebuilt in Flutter for production. Offline-first local storage with background sync to Supabase, plus an integrated ratings/feedback system across the POS and admin dashboard.</p>
+        <ul class="tags">
+          <li>Flutter</li>
+          <li>Dart</li>
+          <li>Riverpod</li>
+          <li>Supabase</li>
+        </ul>
+      </li>
+
+      <li class="workrow">
+        <div class="workrow-head">
+          <h3>SetupBase</h3>
+          <span class="workrow-date">Founder &amp; developer</span>
+        </div>
+        <p>Internal system for SetupBase, a computer-components and phone-accessories reselling business I founded and run. Managing catalog, vendor, and order tracking through a Flutter + Supabase app built alongside the business itself.</p>
+        <ul class="tags">
+          <li>Flutter</li>
+          <li>Supabase</li>
+        </ul>
+      </li>
+
+      <li class="workrow">
+        <div class="workrow-head">
+          <h3>NexusCare+</h3>
+          <span class="workrow-date">Solo project</span>
+        </div>
+        <p>Desktop pharmacy / healthcare management app connecting doctors and pharmacies directly, to reduce prescription-reading errors and lost prescriptions. Designed the MySQL schema and built the PyQt interface end to end — complete and stable.</p>
+        <ul class="tags">
+          <li>Python</li>
+          <li>PyQt</li>
+          <li>MySQL</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <p class="section-note">University and hardware-adjacent builds, plus other work along the way.</p>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-thumb"><span>YoRHa 2B</span></div>
+        <h3>YoRHa 2B: Detachment From Distractions</h3>
+        <p>A combined hardware/software system that detects phone-related distraction during focus sessions — submitted as a university group project, built solo. Trained a YOLOv8 phone-detection model (~0.97 mAP50 by epoch 30 on an initial small-scale dataset) and integrated it with an ESP8266 unit for real-time alerts.</p>
+        <a class="flink" href="#">Python · YOLOv8 · OpenCV · ESP8266</a>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span>ZombieRush</span></div>
+        <h3>ZombieRush / DeadRun</h3>
+        <p>ZombieRush, a console-based C++ arcade survival game built for a university software development project, iterated across three versions — then rebuilt as DeadRun in Java with a full Swing GUI, menus, and difficulty settings.</p>
+        <a class="flink" href="#">C++ · Java (Swing)</a>
+      </div>
+      <div class="project-card">
+        <div class="project-thumb"><span>goochelaar.nl</span></div>
+        <h3>goochelaar.nl</h3>
+        <p>A custom WordPress client site, designed and deployed as part of a two-person development team.</p>
+        <a class="flink" href="#">WordPress</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="about">
+    <h2>About</h2>
+
+    <p>I'm a third-year Computer Science &amp; Engineering student at BUBT in Dhaka, expected to graduate in 2028. I like building complete, working things rather than stopping at prototypes — that's carried me from mobile apps and desktop software into computer vision and embedded hardware, and into running a small reselling business with its own internal tools on the side.</p>
+
+    <div class="about-media">
+      <img class="about-photo-img" src="images/about.gif" alt="Desk setup at night">
+
+      <div class="about-card">
+        <div class="about-card-item">
+          <span class="about-card-label">Email</span>
+          <span class="about-card-value">shawkatul25@gmail.com</span>
+        </div>
+        <div class="about-card-item">
+          <span class="about-card-label">Role</span>
+          <span class="about-card-value">CSE Student &amp; Developer</span>
+        </div>
+        <div class="about-card-item">
+          <span class="about-card-label">Phone</span>
+          <span class="about-card-value">01951202030</span>
+        </div>
+      </div>
+    </div>
+
+    <p>Currently studying at Bangladesh University of Business and Technology (BUBT), CGPA 3.33/4.00, with coursework in Artificial Intelligence, Computer Vision, Microprocessors &amp; Embedded Systems, Database Systems, and Algorithms &amp; Data Structures — before that, HSC at Tejgaon College and SSC at Tejgaon Government High School. Outside coursework, I've solved 150+ algorithmic problems on Codeforces and LeetCode, competed in the BUBT Intra-University Programming Contest (BIUPC 24–25), and I'm a member of the BUBT IT Club and BASIS Students' Forum.</p>
+
+    <h3 class="skills-heading">Skills</h3>
+    <ul class="tags">
+      <li>Python</li>
+      <li>C++</li>
+      <li>C</li>
+      <li>Dart</li>
+      <li>SQL</li>
+      <li>HTML &amp; CSS</li>
+      <li>Flutter</li>
+      <li>Riverpod</li>
+      <li>Supabase</li>
+      <li>PyQt</li>
+      <li>MySQL</li>
+      <li>MongoDB</li>
+      <li>YOLOv8</li>
+      <li>OpenCV</li>
+      <li>ESP8266</li>
+      <li>Git &amp; GitHub</li>
+      <li>WordPress</li>
+      <li>Data Structures &amp; Algorithms</li>
+    </ul>
+
+    <p class="signature">Shawkatul Islam Nabil</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Shawkatul Islam Nabil — 01951202030 · shawkatul25@gmail.com</p>
+</footer>
+
 </body>
 </html>
