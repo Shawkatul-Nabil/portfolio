@@ -9,6 +9,11 @@
 
   --display: 'Space Grotesk', ui-sans-serif, sans-serif;
   --body: 'Inter', ui-sans-serif, sans-serif;
+
+  /* Fluid content width: a % of the viewport with a generous ceiling,
+     so side gutters scale smoothly on any screen instead of hitting
+     a hard cap and leaving big fixed margins on large monitors. */
+  --container: min(90%, 1500px);
 }
 
 * { box-sizing: border-box; }
@@ -32,7 +37,9 @@ h1, h2, h3 { font-family: var(--display); margin: 0 0 0.4em; color: var(--ink); 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px 6vw;
+  width: var(--container);
+  margin: 0 auto;
+  padding: 24px 0;
 }
 .mark {
   font-family: var(--display);
@@ -60,14 +67,14 @@ h1, h2, h3 { font-family: var(--display); margin: 0 0 0.4em; color: var(--ink); 
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  height: clamp(480px, 72vh, 620px);
+  align-items: stretch;
+  min-height: 560px;
 }
 .hero-text {
-  padding: 40px 5vw 40px 6vw;
+  padding: 56px 5vw 56px 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow: hidden;
 }
 .hero-text h1 {
   font-size: clamp(2.2rem, 4.6vw, 3.6rem);
@@ -144,9 +151,9 @@ h1, h2, h3 { font-family: var(--display); margin: 0 0 0.4em; color: var(--ink); 
 
 /* ===== shared section rules ===== */
 section {
-  max-width: 980px;
+  width: var(--container);
   margin: 0 auto;
-  padding: 60px 6vw;
+  padding: 60px 0;
 }
 .work, .projects, .about { border-top: 1px solid var(--line); }
 .work h2, .projects h2, .about h2 {
@@ -322,5 +329,5 @@ a:focus-visible, .btn:focus-visible {
 @media (max-width: 600px) {
   .site-header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .site-header nav a { margin-left: 0; margin-right: 20px; }
-  section { padding: 48px 6vw; }
+  section { padding: 48px 0; }
 }
