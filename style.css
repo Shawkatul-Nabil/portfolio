@@ -112,18 +112,17 @@ h1, h2, h3 { font-family: var(--display); margin: 0 0 0.4em; color: var(--ink); 
 .btn:hover, .btn:focus-visible { background: var(--pink-deep); transform: translateY(-1px); }
 
 .hero-photo {
+  position: relative;
   background: var(--bg-soft);
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 40px 6vw 0 0;
+  overflow: hidden;
+  min-height: 460px;
 }
 .photo-placeholder {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   background: repeating-linear-gradient(135deg, #eae6e0, #eae6e0 10px, #f1eee9 10px, #f1eee9 20px);
-  border: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,11 +132,11 @@ h1, h2, h3 { font-family: var(--display); margin: 0 0 0.4em; color: var(--ink); 
   color: var(--muted);
 }
 .hero-photo-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-width: 360px;
-  aspect-ratio: 3 / 4;
+  height: 100%;
   object-fit: cover;
-  border: 1px solid var(--line);
 }
 
 /* ===== shared section rules ===== */
@@ -307,7 +306,7 @@ a:focus-visible, .btn:focus-visible {
 /* ===== responsive ===== */
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-photo { padding: 0 6vw 40px; }
+  .hero-photo { min-height: 320px; }
   .about-media { grid-template-columns: 1fr; }
   .about-card { margin-left: 0; margin-top: -50px; width: calc(100% - 40px); align-self: center; }
   .project-grid { grid-template-columns: 1fr; }
