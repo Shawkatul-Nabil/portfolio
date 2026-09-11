@@ -229,6 +229,9 @@ section {
 .flink:hover { opacity: 0.7; }
 
 /* ===== about ===== */
+.about {
+  width: min(90%, 820px);
+}
 .about p { color: var(--muted); max-width: 62ch; }
 .skills-heading {
   font-family: var(--display);
